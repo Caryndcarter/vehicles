@@ -1,9 +1,10 @@
 // Importing Vehicle and Wheel classes
 import Vehicle from './Vehicle.js';
 import Wheel from './Wheel.js';
+import Wheelie from '../interfaces/Wheelie.js';
 
 // TODO: The Motorbike class should extend the Vehicle class
-class Motorbike extends Vehicle {
+class Motorbike extends Vehicle implements Wheelie{
   // TODO: Declare properties of the Motorbike class
   // TODO: The properties should include vin, color, make, model, year, weight, top speed, and wheels
   // TODO: The types should be as follows: vin (string), color (string), make (string), model (string), year (number), weight (number), topSpeed (number), wheels (Wheel[])
@@ -72,13 +73,16 @@ class Motorbike extends Vehicle {
         `Wheel 2: ${this.wheels[1].getDiameter} inch with a ${this.wheels[1].getTireBrand} tire`
       );
     }
+
+// TODO: Implement the wheelie method
+  wheelie (vehicle: Motorbike): void {
+
+  // TODO: The method should log the message "Motorbike [make] [model] is doing a wheelie!"
+    console.log(`The motorbike ${vehicle.make} ${vehicle.model} is making a wheelie.`);
+    
+    }
+  
   }
-
-
-  // TODO: Implement the wheelie method
-    // TODO: The method should log the message "Motorbike [make] [model] is doing a wheelie!"
-
-
 
 
 // Export the Motorbike class as the default export

@@ -257,7 +257,7 @@ class Cli {
       ])
       .then((answers) => {
         const motorbike = new Motorbike(
-          // TODO: The generateVin method is static and should be called using the class name Cli, make sure to use Cli.generateVin() for creating a truck and motorbike as well!
+          // X TODO: The generateVin method is static and should be called using the class name Cli, make sure to use Cli.generateVin() for creating a truck and motorbike as well!
           Cli.generateVin(),
           answers.color,
           answers.make,
@@ -308,7 +308,7 @@ class Cli {
           type: 'list',
           name: 'action',
           message: 'Select an action',
-          // TODO: add options to tow and wheelie
+          // X TODO: add options to tow and wheelie
           choices: [
             'Print details',
             'Start vehicle',
@@ -318,6 +318,8 @@ class Cli {
             'Turn right',
             'Turn left',
             'Reverse',
+            "Tow a vehicle", 
+            "Do a wheelie",
             'Select or create another vehicle',
             'Exit',
           ],
