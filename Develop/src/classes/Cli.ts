@@ -294,20 +294,19 @@ class Cli {
         },
       ])
       .then((answers) => {
-        // TODO: check if the selected vehicle is the truck
-        console.log("here are the" + answers.choices);
-        console.log("here are teh answers" + answers.choices);
+      // TODO: check if the selected vehicle is the truck
+  
+        if (vehicle === answers.vehicleToTow ) {
+        // TODO: if it is, log that the truck cannot tow itself then perform actions on the truck to allow the user to select another action
+         console.log("The truck cannot tow itself. Try again.");
+         this.performActions();
 
-        if (answers) {
-          console.log("the truck cannot tow itself.");
-         
-        } else {
-          console.log("the vehicle is being towed");
-         
+        // TODO: if it is not, tow the selected vehicle then perform actions on the truck to allow the user to select another action
+      } else {
+          console.log("The vehicle is being towed.");
+          this.performActions();
         }
 
-        // TODO: if it is, log that the truck cannot tow itself then perform actions on the truck to allow the user to select another action
-        // TODO: if it is not, tow the selected vehicle then perform actions on the truck to allow the user to select another action
       });
   }
 
@@ -402,8 +401,8 @@ class Cli {
         for (let i = 0; i < this.vehicles.length; i++) {
           if (this.vehicles[i].vin === this.selectedVehicleVin) {
 
-            if (this.vehicles[i] instanceof Truck) {    
-            this.findVehicleToTow(this.vehicles[i]); 
+            if (this.vehicles[i] instanceof Truck) {   
+              this.findVehicleToTow(this.vehicles[i]); 
             return; 
 
             } else {
@@ -425,8 +424,6 @@ class Cli {
               }
             }
           }
-
-            
        
       } else if (answers.action === 'Select or create another vehicle') {
           // start the cli to return to the initial prompt if the user wants to select or create another vehicle
