@@ -1,134 +1,70 @@
-# vehicles
+# README.md Generator
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# 08 TypeScript and OOP: Vehicle Builder
+## Description
 
-## Your Task
+This command line application was created to show off the Inquirer package's functionality along with showcasing Object Oriented Programming principles. It provides a series of prompts that allow you to create a dataset of vehicles of different types (Car, Motorbike or Truck).  These vehicles have different attributes to them like make, model, year, weight, etc.  The trucks can tow other vehicles as long as they weigh less.  The motorbikes can perform wheelies.  All the vehicles can be stopped, started, and driven at different acceleration and deceleration rates.  The command line menu allows you to move through the options. 
 
-Your task is to update an existing TypeScript command-line application that builds and uses cars to have additional options for motorbikes and trucks. The application prompts the user to create a new vehicle or select an existing vehicle. After going through the creation process or the selection process, the user is able to perform certain actions with the selected vehicle. The user is returned to the actions menu after each action until they decide to exit the application.
+### Video Demonstration
+[Click here to watch the video demonstration]()
 
-Because this application won't be deployed, you'll need to provide a link to a walkthrough video that demonstrates its functionality. You'll need to submit a link to the video **and** add it to the README of your project.
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
 
-Refer to the [video submission guide on the Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/computer-literacy/video-submission-guide) for additional guidance on creating a video.
+## Installation
 
-### User Story
+After downloading or cloning this repo, make sure you have Node installed and run ``node init -y`` to instantiate your application as a Node app.  Make sure your package.json file has a "type" "module" listed in it.  Install the fs and inquirer packages with ``npm install inquirer`` and ``npm install typescript``.  Run the application in the develop folder with ``npm run build`` or ``npm run start``, depending.  
 
-```md
-AS a developer
-I WANT to update an existing application to include additional vehicle types
-SO THAT I am able to comprehend and work with existing code bases.
-```
+## Usage
 
-## Acceptance Criteria
+Begin by running ``npm run start`` in the command line. Once you are prompted by Inquirer to answer the necessary questions, be ready to submit your answers. 
 
-```md
-GIVEN a command-line application that accepts user input
-WHEN I am prompted to create a new vehicle or existing vehicle
-THEN I can choose between the two options
-WHEN I am prompted to choose the vehicle type during creation
-THEN I can choose between car, truck, and motorbike
-WHEN I am prompted for details about the vehicle
-THEN I can enter the vehicle information
-WHEN I have entered all the vehicle information
-THEN I can use the created vehicle
-WHEN I select an existing vehicle
-THEN I can use the selected existing vehicle
-WHEN I have created a new vehicle or selected an existing vehicle
-THEN I can perform actions with that vehicle
-WHEN I perform an action with a vehicle
-THEN I see the result of the action in the command-line
-WHEN I complete the process of performing an action
-THEN I can perform additional actions until I choose to exit
-```
+ The Inquirer prompt begins with "Create a new vehicle or select an existing vehicle." If you create new vehicle you choose between Car, Truck or Motorbike. From there you have options like this: 
+ Select or create another vehicle 
+ Exit 
+  Print details 
+  Start vehicle 
+❯ Accelerate 5 MPH 
+  Decelerate 5 MPH 
+  Stop vehicle 
+  Turn right
+  Turn left 
+  Reverse 
+  Tow a vehicle 
+  Do a wheelie 
 
-## Additional Requirements
+You select or create a vehicle and from there the actions you choose are being performed with that vehicle.  
 
-This Challenge combines many of the skills covered so far. In addition to the user story and acceptance criteria, we've provided some guidelines to help you get started.
+![Demo](./dev/assets/readme-generator-screenshot.png)
 
-Because this Challenge requires a video submission, refer to the [Full-Stack Blog video submission guide](https://coding-boot-camp.github.io/full-stack/computer-literacy/video-submission-guide) for guidance on creating and sharing a video.
 
-Your application should use [Inquirer](https://www.npmjs.com/package/inquirer) for collecting input from the user. The application will be invoked by using the following command:
+## License
 
-```bash
-npm start
-```
+MIT License
 
-## 📝 Notes
+The license for this application is MIT License.
 
-Moving forward, you will be provided with the `tsconfig.json` file. This is to reflect the fact that most companies assign you projects with these configurations already set up.
+https://opensource.org/license/MIT
 
-## Helpful TypeScript Resources
+## Contributing
 
-* [Classes](https://www.typescriptlang.org/docs/handbook/2/classes.html)
+Contributors: 
 
-* [Object types](https://www.typescriptlang.org/docs/handbook/2/objects.html)
+Caryn Carter https://github.com/Caryndcarter 
 
-* [Everyday types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)
+To contribute, contact carter.caryn@gmail.com.
 
-* [More on functions](https://www.typescriptlang.org/docs/handbook/2/functions.html)
+## Tests
 
-## Grading Requirements
+Tests for this application have not been written at this time.  When they are written, they will be added in this section.  
 
-> **Note** If a Challenge assignment submission is marked as "0," it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
 
-This Challenge is graded based on the following criteria:
+## Questions
 
-### Deliverables: 20%
+For questions visit https://github.com/caryndcarter or write to carter.caryn@gmail.com.
 
-* A walkthrough video that demonstrates the functionality of the Vehicle Builder.
-
-* Your GitHub repository containing your application code.
-
-### Walkthrough Video: 27%
-
-* The `README.md` file must include a link to the walkthrough video.
-
-* The walkthrough video must demonstrate how a user would invoke the application from the command line.
-
-* The walkthrough video must demonstrate how a user would enter responses to all of the prompts in the application.
-
-* The walkthrough video must demonstrate all the prompts and functionality related to trucks and motorbikes working properly.
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the preceding acceptance criteria plus the following:
-
-  * It uses the [Inquirer package](https://www.npmjs.com/package/inquirer).
-
-  * The application must have properly implemented `Truck` and `Motorbike` classes:
-
-    * The user should be able to choose between a car, a truck, or a motorbike when creating a vehicle.
-
-    * The `Truck` and `Motorbike` classes must prompt the user for details that the `Car` class doesn't.
-
-    * The `Truck` class must allow the user to implement an action that the `Car` and `Motorbike` classes cannot.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains a high-quality readme with description and a link to a walkthrough video.
-
-## Review
-
-You are required to submit the following for review:
-
-* A walkthrough video that demonstrates the functionality of the application.
-
-* The URL of the GitHub repository, with a unique name and a README describing the project.
-
----
-&copy; 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
