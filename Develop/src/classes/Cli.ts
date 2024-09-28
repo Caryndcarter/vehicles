@@ -418,7 +418,8 @@ class Cli {
             if (this.vehicles[i].vin === this.selectedVehicleVin) {
   
               if (this.vehicles[i] instanceof Motorbike) {    
-                console.log("we're doing a wheelie");
+                let bike: any = this.vehicles[i]; 
+                bike.wheelie(this.vehicles[i]); 
                 
               } else {
                 console.log("Your selected vehicle is not a Motorbike and cannot do a wheelie.")
