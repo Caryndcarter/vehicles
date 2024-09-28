@@ -278,7 +278,7 @@ class Cli {
 
   // method to find a vehicle to tow
   // TODO: add a parameter to accept a truck object
-  findVehicleToTow(vehicle: any): void {
+  findVehicleToTow(vehicle: Motorbike | Car | Truck): void {
     inquirer
       .prompt([
         {
@@ -295,7 +295,8 @@ class Cli {
       ])
       .then((answers) => {
         // TODO: check if the selected vehicle is the truck
-        console.log("here are the" + vehicle);
+        console.log("here are the" + answers.choices);
+        console.log("here are teh answers" + answers.choices);
 
         if (answers) {
           console.log("the truck cannot tow itself.");
@@ -410,15 +411,24 @@ class Cli {
             }
           }
         }
-
-       
-
       }  else if (answers.action === "Do a wheelie") {
         // TODO: add statements to perform the wheelie action only if the selected vehicle is a motorbike
-          console.log("we're going to try and do a wheelie here.")
 
-      }
-        else if (answers.action === 'Select or create another vehicle') {
+          for (let i = 0; i < this.vehicles.length; i++) {
+            if (this.vehicles[i].vin === this.selectedVehicleVin) {
+  
+              if (this.vehicles[i] instanceof Motorbike) {    
+                console.log("we're doing a wheelie");
+                
+              } else {
+                console.log("Your selected vehicle is not a Motorbike and cannot do a wheelie.")
+              }
+            }
+          }
+
+            
+       
+      } else if (answers.action === 'Select or create another vehicle') {
           // start the cli to return to the initial prompt if the user wants to select or create another vehicle
           this.startCli();
           return;
