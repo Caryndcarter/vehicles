@@ -38,9 +38,7 @@ Begin by running ``npm run start`` in the command line. Once you are prompted by
   Tow a vehicle 
   Do a wheelie 
 
-You select or create a vehicle and from there the actions you choose are being performed with that vehicle.  
-
-![Demo](./dev/assets/readme-generator-screenshot.png)
+You select or create a vehicle and from there the actions you choose are being performed with that vehicle. 
 
 
 ## License
