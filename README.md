@@ -18,7 +18,7 @@ This command line application was created to show off the Inquirer package's fun
 
 ## Installation
 
-After downloading or cloning this repo, make sure you have Node installed and run ``node init -y`` to instantiate your application as a Node app.  Make sure your package.json file has a "type" "module" listed in it.  Install the fs and inquirer packages with ``npm install inquirer`` and ``npm install typescript``.  Run the application in the develop folder with ``npm run build`` or ``npm run start``, depending.  
+After downloading or cloning this repo, make sure you have Node installed to instantiate your application as a Node app.  Make sure your package.json file has a "type" "module" listed in it.  Install the packages with ``npm install inquirer`` and ``npm install typescript``.  Run the application in the develop folder with ``npm run build`` or ``npm run start``, depending.  
 
 ## Usage
 
