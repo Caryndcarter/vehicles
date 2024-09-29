@@ -25,18 +25,18 @@ After downloading or cloning this repo, make sure you have Node installed to ins
 Begin by running ``npm run start`` in the command line. Once you are prompted by Inquirer to answer the necessary questions, be ready to submit your answers. 
 
  The Inquirer prompt begins with "Create a new vehicle or select an existing vehicle." If you create new vehicle you choose between Car, Truck or Motorbike. From there you have options like this: 
- Select or create another vehicle 
- Exit 
-  Print details 
-  Start vehicle 
-❯ Accelerate 5 MPH 
-  Decelerate 5 MPH 
-  Stop vehicle 
-  Turn right
-  Turn left 
-  Reverse 
-  Tow a vehicle 
-  Do a wheelie 
+ 1. Select or create another vehicle 
+ 2. Exit 
+ 3. Print details 
+ 4. Start vehicle 
+ 5. Accelerate 5 MPH
+ 6. Decelerate 5 MPH 
+ 7. Stop vehicle 
+ 8. Turn right
+ 9. Turn left 
+ 10. Reverse 
+ 11. Tow a vehicle 
+ 12. Do a wheelie 
 
 You select or create a vehicle and from there the actions you choose are being performed with that vehicle. 
 
