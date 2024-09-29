@@ -6,7 +6,7 @@
 This command line application was created to show off the Inquirer package's functionality along with showcasing Object Oriented Programming principles. It provides a series of prompts that allow you to create a dataset of vehicles of different types (Car, Motorbike or Truck).  These vehicles have different attributes to them like make, model, year, weight, etc.  The trucks can tow other vehicles as long as they weigh less.  The motorbikes can perform wheelies.  All the vehicles can be stopped, started, and driven at different acceleration and deceleration rates.  The command line menu allows you to move through the options. 
 
 ### Video Demonstration
-[Click here to watch the video demonstration]()
+[Click here to watch the video demonstration](https://youtu.be/JUZVK46nxAc)
 
 ## Table of Contents
 - [Installation](#installation)
